@@ -1,0 +1,12 @@
+#Files made by running/building.
+Makefile
+*.make
+premake.lua
+*.pyo
+*.pyc
+
+*.vimrc
+tags
+*.swp
+
+a.out
