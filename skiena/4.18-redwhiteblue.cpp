@@ -21,14 +21,14 @@ void rwbsort(char **a, int n)
     int i = 0, l = 0, h = n - 1;
 
     // invariant: 
-    //    <l:      'r'
-    //    >l, <i:  'w'
-    //    >i, <h:  unknown
-    //    >h:      'b'
+    //    <l:       'r'
+    //    >=l, <i:  'w'
+    //    >=i, <=h:  unknown
+    //    >h:       'b'
 
     // either i increases or h decreases so linear
 
-    while (i <= h)
+    while (i <= h) // while more unknowns
         switch (examine(a, i))
         {
             case 'r':
